@@ -28,6 +28,7 @@ echo "Running librarian-puppet"
 (cd $BUILDFARM_DEPLOYMENT_PATH/ && librarian-puppet install --verbose)
 echo "Running puppet"
 env FACTER_buildfarm_role="$buildfarm_role" puppet apply --verbose \
+  --detailed-exitcodes \
   --parser future \
   --modulepath="${BUILDFARM_DEPLOYMENT_PATH}/modules" \
   --logdest /var/log/puppet.log \
