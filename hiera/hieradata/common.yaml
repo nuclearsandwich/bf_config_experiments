@@ -1,4 +1,3 @@
-docker::manage_kernel: false
 jenkins::slave::ui_user: 'admin'
 jenkins::slave::ui_pass: 'changeme'
 jenkins::slave::masterurl: 'http://master:8080'
