@@ -104,21 +104,21 @@ ssh_keys:
 jenkins-agent::reprepro_updater_config: |
     [ubuntu_building]
     architectures: amd64
-    distros: xenial
+    distros: trusty xenial
     repository_path: /var/repos/ubuntu/building
     signing_key: 'E5944336 0776D936'
     upstream_config: /home/jenkins-agent/reprepro_config
 
     [ubuntu_testing]
     architectures: amd64
-    distros: xenial
+    distros: trusty xenial
     repository_path: /var/repos/ubuntu/testing
     signing_key: 'E5944336 0776D936'
     upstream_config: /home/jenkins-agent/reprepro_config
 
     [ubuntu_main]
     architectures: amd64 source
-    distros: xenial
+    distros: trusty xenial
     repository_path: /var/repos/ubuntu/main
     signing_key: 'E5944336 0776D936'
     upstream_config: /home/jenkins-agent/reprepro_config
@@ -129,7 +129,7 @@ jenkins-agent::reprepro_config:
         content: |
             name: ros_bootstrap
             method: http://repos.ros.org/repos/ros_bootstrap
-            suites: [xenial]
+            suites: [trusty, xenial]
             component: main
             architectures: [amd64]
             # filter_formula: Package (% python* )
