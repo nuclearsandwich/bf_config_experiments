@@ -103,14 +103,14 @@ ssh_keys:
 
 jenkins-agent::reprepro_updater_config: |
     [ubuntu_building]
-    architectures: amd64
+    architectures: amd64 source
     distros: trusty xenial
     repository_path: /var/repos/ubuntu/building
     signing_key: E5944336
     upstream_config: /home/jenkins-agent/reprepro_config
 
     [ubuntu_testing]
-    architectures: amd64
+    architectures: amd64 source
     distros: trusty xenial
     repository_path: /var/repos/ubuntu/testing
     signing_key: E5944336
