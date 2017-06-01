@@ -131,7 +131,7 @@ jenkins-agent::reprepro_config:
             method: http://repos.ros.org/repos/ros_bootstrap
             suites: [trusty, xenial]
             component: main
-            architectures: [amd64]
+            architectures: [amd64, source]
             # filter_formula: Package (% python* )
             # needed until we deploy the gpg key
             verify_release: blindtrust
