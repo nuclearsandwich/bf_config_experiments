@@ -92,21 +92,21 @@ jenkins-agent::gpg_public_key: |
 
 jenkins-agent::reprepro_updater_config: |
     [ubuntu_building]
-    architectures: amd64 source
+    architectures: amd64 arm64 source
     distros: trusty xenial
     repository_path: /var/repos/ubuntu/building
     signing_key: E5944336
     upstream_config: /home/jenkins-agent/reprepro_config
 
     [ubuntu_testing]
-    architectures: amd64 source
+    architectures: amd64 arm64 source
     distros: trusty xenial
     repository_path: /var/repos/ubuntu/testing
     signing_key: E5944336
     upstream_config: /home/jenkins-agent/reprepro_config
 
     [ubuntu_main]
-    architectures: amd64 source
+    architectures: amd64 arm64 source
     distros: trusty xenial
     repository_path: /var/repos/ubuntu/main
     signing_key: E5944336
@@ -120,7 +120,7 @@ jenkins-agent::reprepro_config:
             method: http://repos.ros.org/repos/ros_bootstrap
             suites: [trusty, xenial]
             component: main
-            architectures: [amd64, source]
+            architectures: [amd64, arm64, source]
             # filter_formula: Package (% python* )
             # needed until we deploy the gpg key
             verify_release: blindtrust
